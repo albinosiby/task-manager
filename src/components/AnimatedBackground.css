@@ -1,0 +1,82 @@
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  top: 10%;
+  left: 5%;
+}
+
+.shape-2 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  top: 50%;
+  right: 5%;
+}
+
+.shape-3 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  bottom: 10%;
+  left: 60%;
+}
+
+.shape-4 {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  top: 20%;
+  right: 40%;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 15% 70%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 45% 45%, rgba(120, 219, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(168, 237, 234, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Animation for background shapes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.floating-shape {
+  animation: float 20s ease-in-out infinite;
+}
+
+.shape-1 { animation-delay: 0s; }
+.shape-2 { animation-delay: -5s; }
+.shape-3 { animation-delay: -10s; }
+.shape-4 { animation-delay: -15s; }
