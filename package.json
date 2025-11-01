@@ -1,10 +1,10 @@
 {
   "name": "mindblowing-task-manager",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "build": "CI=false && npm run build:react",
-    "build:react": "react-scripts build",
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -14,6 +14,9 @@
     "react-scripts": "5.0.1",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.288.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   },
   "browserslist": {
     "production": [
